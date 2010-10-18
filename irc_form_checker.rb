@@ -61,6 +61,17 @@ class BestMexican
     fill_in "city", :with => "Maracaibo"
     fill_in "country", :with => "Venezuela"
     click_button "submit"
+    page.has_content?('Gracias por contactarnos!')
+  end
+
+  def contact_en
+    visit('http://bestmexicanresort.com/contact_us')
+     fill_in "first_name", :with => "hugo"
+    fill_in "last_name", :with => "rincon"
+    fill_in "email", :with => "hugo@bakedweb.net"
+    fill_in "phone", :with => "12345"
+    fill_in "notes", :with => "testing"
+    click_button "submit"
     page.has_content?('Thanks for contacting us!')
   end
 
