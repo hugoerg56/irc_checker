@@ -178,20 +178,54 @@ end
 
 
 
-@runner = BestMexican.new
-@runner.newslleter_en
-@runner.newslleter_es
-@runner.reservation_en
-@runner.reservation_es
+#---------     AmazingRiviera     --------------------
+class Amazingriviera
+  include Capybara
+
+  def contact_en
+    visit('http://www.amazingriviera.com/contactus')
+    fill_in "fname", :with => "hugo"
+    fill_in "lname", :with => "rincon"
+    fill_in "email", :with => "hugo@bakedweb.net"
+    fill_in "phone", :with => "12345"
+    fill_in "notes", :with => "testing"
+    click_button "Send"
+    page.has_content?('Thanks for contacting us')
+  end
+
+  def contact_es
+    visit('http://www.amazingriviera.com/contacto')
+    fill_in "fname", :with => "hugo"
+    fill_in "lname", :with => "rincon"
+    fill_in "email", :with => "hugo@bakedweb.net"
+    fill_in "phone", :with => "12345"
+    fill_in "notes", :with => "testing"
+    click_button "Enviar"
+    page.has_content?('Thanks for contacting us')
+  end
+
+end
+
+
+#@runner = BestMexican.new
+#@runner.newslleter_en
+#@runner.newslleter_es
+#@runner.reservation_en
+#@runner.reservation_es
+#@runner.contact_en
+#@runner.contact_es
+
+#@runner = Resortluxury.new
+#@runner.newslleter
+#@runner.reservation
+#@runner.contact
+
+#@runner = Luxurydays.new
+#@runner.newslleter
+#@runner.reservation
+#@runner.contact
+
+@runner = Amazingriviera.new
 @runner.contact_en
 @runner.contact_es
 
-@runner = Resortluxury.new
-@runner.newslleter
-@runner.reservation
-@runner.contact
-
-@runner = Luxurydays.new
-@runner.newslleter
-@runner.reservation
-@runner.contact
