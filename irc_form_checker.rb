@@ -207,25 +207,25 @@ class Amazingriviera
 end
 
 
-#@runner = BestMexican.new
-#@runner.newslleter_en
-#@runner.newslleter_es
-#@runner.reservation_en
-#@runner.reservation_es
-#@runner.contact_en
-#@runner.contact_es
+ @runner = BestMexican.new
+ @runner.newslleter_en
+ @runner.newslleter_es
+ @runner.reservation_en
+ @runner.reservation_es
+ @runner.contact_en
+ @runner.contact_es
 
-#@runner = Resortluxury.new
-#@runner.newslleter
-#@runner.reservation
-#@runner.contact
+ @runner = Resortluxury.new
+ @runner.newslleter 
+ @runner.reservation
+ @runner.contact
 
-#@runner = Luxurydays.new
-#@runner.newslleter
-#@runner.reservation
-#@runner.contact
+ @runner = Luxurydays.new
+ @runner.newslleter
+ @runner.reservation 
+ @runner.contact
 
-@runner = Amazingriviera.new
-@runner.contact_en
-@runner.contact_es
+ @runner = Amazingriviera.new
+ @runner.contact_en
+ @runner.contact_es
 
